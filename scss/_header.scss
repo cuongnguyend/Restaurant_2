@@ -1,0 +1,256 @@
+$primaryColor: #fdc42c;
+@mixin menu_active {
+    padding: 0 15px;
+    width: 250px;
+    border-bottom: 1.5px solid $primaryColor;
+}
+
+@mixin toggleNav_btn {
+    font-size: 20px;
+    transition: .2s;
+    color: white;
+    &:hover {
+        color: #fdc42c;
+        transition: .2s;
+    }
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+header {
+    position: relative;
+    z-index: 99;
+    .containner {
+        transition: .5s;
+        padding-top: 10px;
+        z-index: 10;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        border-bottom: 2px solid $primaryColor;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            padding-left: 10px;
+            a {
+                color: $primaryColor;
+                text-decoration: none;
+                font-size: 30px;
+                letter-spacing: 2.5px;
+            }
+        }
+        .menu {
+            padding-right: 10px;
+            position: relative;
+            .openNav {
+                @include toggleNav_btn();
+            }
+            .closeNav {
+                @include toggleNav_btn();
+                display: none;
+            }
+            .navv {
+                z-index: 99;
+                right: 0;
+                top: 41px;
+                flex-direction: column;
+                position: absolute;
+                display: none;
+                animation: drop .8s;
+                transition: .5s;
+                div {
+                    background: #1e1e1e;
+                    height: 70px;
+                    padding: 45px 15px 0 30px;
+                    width: 200px;
+                    text-transform: uppercase;
+                    text-align: right;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1.5px solid #f1f1f1;
+                    cursor: pointer;
+                    transition: .5s;
+                    float: right;
+                    a {
+                        text-decoration: none;
+                        color: #f1f1f1;
+                        letter-spacing: 1px;
+                    }
+                    .left {
+                        color: #f1f1f1;
+                        display: none;
+                    }
+                    &:hover {
+                        @include menu_active();
+                        transition: .5s;
+                        a,
+                        span {
+                            color: $primaryColor;
+                            transition: .3s;
+                        }
+                    }
+                }
+                .active {
+                    @include menu_active();
+                    a,
+                    span {
+                        color: $primaryColor;
+                    }
+                    .left {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .banner {
+        border-bottom: none;
+        z-index: 1;
+        width: 80%;
+        .carousel-item {
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 30%);
+            }
+            img {
+                width: 100%;
+            }
+            .content {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                z-index: 999;
+                width: 70%;
+                top: 35%;
+                left: 15%;
+                .gr_readmore span {
+                    width: 5px;
+                    height: 46px;
+                    background: white;
+                }
+                .btn {
+                    width: fit-content;
+                    border-radius: 0 !important;
+                    padding: 7px 30px 7px 20px;
+                    background: $primaryColor;
+                    text-align: center;
+                    letter-spacing: 3px;
+                    transition: .3s;
+                    font-size: 20px;
+                    &:hover {
+                        padding-left: 30px;
+                        transition: .3s;
+                    }
+                }
+                .welcome {
+                    text-transform: uppercase;
+                    position: relative;
+                    font-size: 65px;
+                    letter-spacing: 16px;
+                    span {
+                        color: $primaryColor;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background: $primaryColor;
+                        width: 0%;
+                        height: 1.5px;
+                        transition: width 1s ease;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+                .text {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background: $primaryColor;
+                        width: 0%;
+                        height: 1.5px;
+                        transition: width 1s ease;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+                div {
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    letter-spacing: 10px;
+                }
+            }
+        }
+        .carousel-indicators {
+            left: 15%;
+            margin-left: 0;
+            bottom: 25%;
+            z-index: 9999 !important;
+            justify-content: start;
+            li {
+                background: #8d6e1a;
+                width: 60px;
+                height: 3px;
+                margin: 0 10px;
+                cursor: pointer;
+                &.active {
+                    background: $primaryColor;
+                }
+            }
+        }
+    }
+    .wrap_nav {
+        width: 20%;
+        height: auto;
+        background: #1e1e1e;
+        filter: drop-shadow(-2px 1px 20px rgb(34, 34, 34));
+        z-index: 2;
+    }
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0;
+    z-index: 9999 !important;
+    background-color: #383836d7;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .4);
+    padding-bottom: 10px;
+    animation: smoothScroll 1s forwards;
+    width: 100% !important;
+}
+
+@keyframes smoothScroll {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}

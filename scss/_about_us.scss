@@ -1,0 +1,102 @@
+main {
+    .about_us_content {
+        width: 100%;
+        display: flex;
+        position: relative;
+        .introduce {
+            width: 50%;
+            position: relative;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+            .content {
+                position: absolute;
+                width: 60%;
+                padding: 2%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                background: $primaryColor;
+                text-align: center;
+                p {
+                    font-size: 35px;
+                    color: black;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 4px;
+                }
+                .contact {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 30px;
+                        i {
+                            margin: 0 15px;
+                            width: 60px;
+                            height: 60px;
+                            border: 2.5px solid white;
+                            border-radius: 100%;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+        .bg_content {
+            width: 50%;
+            background: $primaryColor;
+        }
+        .content {
+            filter: drop-shadow(10px 0px 20px rgb(34, 34, 34));
+            width: 50%;
+            top: 50%;
+            transform: translate(90%, -50%);
+            position: absolute;
+            background: #fff;
+            padding: 7%;
+            .title {
+                font-size: 35px;
+                text-transform: uppercase;
+                width: 80%;
+                font-weight: 600;
+                letter-spacing: 4px;
+                color: $primaryColor;
+                border-bottom: 2px solid $primaryColor;
+                margin-bottom: 5%;
+            }
+            .gr_readmore {
+                display: flex;
+                align-items: center;
+                padding-top: 4%;
+                span {
+                    width: 3px;
+                    height: 45.5px;
+                    background: rgb(0, 0, 0);
+                }
+                .btn {
+                    width: fit-content;
+                    border-radius: 0 !important;
+                    padding: 7px 15px 7px 10px;
+                    background: $primaryColor;
+                    color: black;
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: center;
+                    letter-spacing: 1.5px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    transition: .5s;
+                    &:hover {
+                        padding-left: 15px;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+}

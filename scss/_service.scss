@@ -1,0 +1,112 @@
+main {
+    .service_content {
+        padding: 5% 0;
+        .containner {
+            .service1 {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 4%;
+                .content {
+                    padding: 5%;
+                    padding-top: 2%;
+                    width: 51%;
+                    background: $primaryColor;
+                    .title {
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        text-transform: uppercase;
+                        color: white;
+                        font-size: 40px;
+                        letter-spacing: 5px;
+                        font-weight: 500;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                        border-bottom: 2px solid white;
+                        p::after {
+                            content: "ipsum 01";
+                            color: black;
+                        }
+                        img {
+                            filter: brightness(0.1);
+                        }
+                    }
+                    .text {
+                        padding: 6% 0 0 6%;
+                        color: whitesmoke;
+                    }
+                    .gr_readmore {
+                        padding: 2% 0 0 6%;
+                        span {
+                            width: 3px;
+                            height: 45px;
+                            background: white;
+                        }
+                        .btn {
+                            width: fit-content;
+                            border-radius: 0 !important;
+                            color: white;
+                            padding: 7px 20px 7px 10px;
+                            background: black;
+                            text-align: center;
+                            transition: .5s;
+                            letter-spacing: 3px;
+                            font-size: 20px;
+                            &:hover {
+                                padding-left: 15px;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+                .img {
+                    width: 48%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .service2 {
+                flex-direction: row-reverse;
+                .content {
+                    background: #000;
+                    .title {
+                        p:after {
+                            content: 'ipsum 02';
+                            color: $primaryColor;
+                        }
+                        img {
+                            filter: none;
+                        }
+                    }
+                    .gr_readmore {
+                        .btn {
+                            background: $primaryColor;
+                        }
+                    }
+                }
+            }
+            .service3 {
+                .content {
+                    .title {
+                        p:after {
+                            content: 'ipsum 03';
+                        }
+                    }
+                }
+            }
+            .service4 {
+                .content {
+                    .title {
+                        p:after {
+                            content: 'ipsum 04';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
