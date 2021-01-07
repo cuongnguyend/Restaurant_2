@@ -416,9 +416,9 @@ main .our_service {
         color: white;
         margin-bottom: 0; }
       main .our_service .introduce .backdrop .grbtn {
-        display: flex;
         align-items: center;
-        padding-top: 10%; }
+        padding-top: 10%;
+        display: flex; }
         main .our_service .introduce .backdrop .grbtn span {
           width: 3px;
           height: 45.5px;
@@ -705,9 +705,9 @@ main .shop1 {
         color: white;
         margin-bottom: 0; }
       main .shop1 .introduce .backdrop .grbtn {
-        display: flex;
         align-items: center;
-        padding-top: 10%; }
+        padding-top: 10%;
+        display: flex; }
         main .shop1 .introduce .backdrop .grbtn span {
           width: 3px;
           height: 45.5px;
@@ -792,9 +792,9 @@ main .our_story_content .story1 {
         color: white;
         margin-bottom: 0; }
       main .our_story_content .story1 .introduce .backdrop .grbtn {
-        display: flex;
         align-items: center;
-        padding-top: 10%; }
+        padding-top: 10%;
+        display: flex; }
         main .our_story_content .story1 .introduce .backdrop .grbtn span {
           width: 3px;
           height: 45.5px;

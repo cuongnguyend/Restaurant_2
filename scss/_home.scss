@@ -15,9 +15,9 @@ body {
 }
 
 @mixin grbtn {
-    display: flex;
     align-items: center;
     padding-top: 10%;
+    display: flex;
     span {
         width: 3px;
         height: 45.5px;
