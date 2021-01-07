@@ -71,7 +71,9 @@
                         text-align: left;
                         float: left;
                         flex-direction: row-reverse;
-                        justify-content: flex-start;
+                        padding: 20px 16px 0 16px;
+                        display: flex;
+                        justify-content: space-between;
                     }
                 }
             }
@@ -328,7 +330,12 @@
             }
         }
         .containner {
+            width: 100% !important;
             .menu {
+                .openNav,
+                .closeNav {
+                    padding-left: 1vw;
+                }
                 .navv {
                     div {
                         height: 50px;

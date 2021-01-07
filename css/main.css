@@ -8,12 +8,11 @@
     opacity: 1;
     transform: translateX(0); } }
 header {
-  position: relative;
-  z-index: 99; }
+  position: relative; }
   header .containner {
     transition: .5s;
     padding-top: 10px;
-    z-index: 10;
+    z-index: 110;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -98,7 +97,7 @@ header {
             display: block; }
   header .banner {
     border-bottom: none;
-    z-index: 1;
+    z-index: 99;
     width: 80%; }
     header .banner .carousel-item:after {
       content: '';
@@ -184,11 +183,15 @@ header {
         header .banner .carousel-indicators li.active {
           background: #fdc42c; }
   header .wrap_nav {
+    z-index: 99;
     width: 20%;
     height: auto;
     background: #1e1e1e;
     filter: drop-shadow(-2px 1px 20px #222222);
     z-index: 2; }
+
+.scroll_menu {
+  width: 100% !important; }
 
 .sticky {
   position: fixed !important;
@@ -1235,7 +1238,9 @@ footer {
           text-align: left;
           float: left;
           flex-direction: row-reverse;
-          justify-content: flex-start; }
+          padding: 20px 16px 0 16px;
+          display: flex;
+          justify-content: space-between; }
   header .banner {
     width: 100%; }
     header .banner .carousel-item .content {
@@ -1408,17 +1413,22 @@ footer {
     letter-spacing: 5px; }
   header .banner .carousel-item .content .gr_readmore {
     display: none !important; }
-  header .containner .menu .navv div {
-    height: 50px;
-    padding: 20px 16px 0 16px;
-    width: 150px;
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between; }
-    header .containner .menu .navv div:hover {
+  header .containner {
+    width: 100% !important; }
+    header .containner .menu .openNav,
+    header .containner .menu .closeNav {
+      padding-left: 1vw; }
+    header .containner .menu .navv div {
+      height: 50px;
+      padding: 20px 16px 0 16px;
+      width: 150px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between; }
+      header .containner .menu .navv div:hover {
+        width: 180px; }
+    header .containner .menu .navv .active {
       width: 180px; }
-  header .containner .menu .navv .active {
-    width: 180px; }
 
   main .our_story {
     height: auto;

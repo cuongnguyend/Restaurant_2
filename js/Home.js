@@ -14,9 +14,9 @@ $(document).ready(function() {
             scroll = $(window).scrollTop();
 
         if (scroll >= 40) {
-            sticky.addClass('sticky');
+            sticky.addClass('sticky scroll_menu');
         } else {
-            sticky.removeClass('sticky');
+            sticky.removeClass('sticky scroll_menu');
 
         }
     });
