@@ -104,6 +104,7 @@ main {
                 }
             }
             .img {
+                overflow: hidden;
                 width: 50%;
                 filter: drop-shadow(10px 8px 10px rgb(34, 34, 34));
                 margin-left: 8px;
@@ -221,6 +222,7 @@ main {
                         .content {
                             cursor: pointer;
                             position: relative;
+                            transition: .5s;
                             width: fit-content;
                             height: fit-content;
                             text-align: right;
@@ -272,7 +274,7 @@ main {
             background-size: 100%;
             .backdrop {
                 padding: 30%;
-                padding-left: 12%;
+                padding-left: 13%;
                 backdrop-filter: contrast(1.2) brightness(0.2) sepia(0.3) saturate(1.5) hue-rotate(-20deg);
                 .title {
                     font-size: 40px;

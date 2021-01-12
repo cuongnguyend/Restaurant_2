@@ -1,7 +1,7 @@
 @keyframes drop_res {
     0% {
         opacity: 0;
-        transform: translateX(-50%);
+        transform: translateX(-150%);
     }
     100% {
         opacity: 1;
@@ -67,7 +67,7 @@
                 .navv {
                     left: 0;
                     animation: drop_res .8s;
-                    div {
+                    a {
                         text-align: left;
                         float: left;
                         flex-direction: row-reverse;
@@ -101,15 +101,15 @@
                 flex-direction: column;
                 .controlTab {
                     padding: 0;
-                    padding-top: 20px;
+                    padding-top: 6%;
                     width: 100%;
                     text-align: center;
                     p {
                         width: 40%;
                         margin: 0 auto;
-                        margin-bottom: 20px;
                     }
                     ul {
+                        margin-bottom: 10px !important;
                         flex-direction: row;
                         justify-content: center;
                         li {
@@ -124,7 +124,7 @@
                     margin-bottom: 10%;
                     .controls-top {
                         bottom: 0;
-                        transform: translate(-50%, 100%);
+                        transform: translate(-50%, 120%);
                         left: 50%;
                     }
                 }
@@ -141,7 +141,7 @@
                     backdrop-filter: none;
                     padding: 0;
                     text-align: center;
-                    padding-top: 40px;
+                    padding-top: 10%;
                     .title {
                         color: black;
                     }
@@ -172,11 +172,6 @@
         }
         .our_story_content {
             .story1 {
-                .introduce {
-                    .backdrop {
-                        padding: 5% 0;
-                    }
-                }
                 .content .slide_story .carousel-indicators {
                     bottom: -15% !important;
                 }
@@ -185,17 +180,19 @@
                 background-size: cover;
                 .backdrop {
                     .containner {
+                        padding-top: 7%;
                         flex-direction: column-reverse;
                         .introduce {
                             width: 100%;
                             text-align: center;
+                            padding-left: 0;
                             .title1 {
                                 width: 70%;
                                 margin: 0 auto;
                                 margin-bottom: 20px;
                             }
                             p {
-                                width: 60%;
+                                width: 70%;
                                 margin: 0 auto;
                             }
                             .grbtn {
@@ -310,18 +307,18 @@
 
 @media (max-width: 768px) {
     .containner {
-        width: 95% !important;
+        width: 92% !important;
         margin: 0 auto;
     }
     header {
         .banner .carousel-item {
             .content {
                 .welcome {
-                    font-size: 35px;
+                    font-size: 40px;
                     letter-spacing: 8px;
                 }
                 div {
-                    font-size: 15px;
+                    font-size: 25px;
                     letter-spacing: 5px;
                 }
                 .gr_readmore {
@@ -337,7 +334,7 @@
                     padding-left: 1vw;
                 }
                 .navv {
-                    div {
+                    a {
                         height: 50px;
                         padding: 20px 16px 0 16px;
                         width: 150px;
@@ -371,8 +368,11 @@
             .product_tab_container {
                 .backdrop_bg {
                     margin: 0 auto;
-                    margin-bottom: 10%;
+                    margin-bottom: 13%;
                     width: 95%;
+                    .controls-top {
+                        transform: translate(-50%, 120%);
+                    }
                     .carousel-item {
                         img {
                             padding: 1% 0;
@@ -389,7 +389,7 @@
                 .controlTab {
                     .title,
                     p {
-                        font-size: 25px;
+                        font-size: 30px;
                     }
                     ul li {
                         font-size: 20px;
@@ -400,12 +400,16 @@
         .our_service {
             .introduce {
                 width: 95%;
+                .backdrop {
+                    padding-top: 6%;
+                }
             }
             .content {
                 width: 95%;
             }
         }
         .about_us {
+            padding-top: 7%;
             .containner {
                 flex-direction: column-reverse;
                 .introduce {
@@ -420,6 +424,12 @@
                 }
                 .slide_chef {
                     width: 100%;
+                    .carousel-item {
+                        .row {
+                            width: 100%;
+                            margin: 0 auto;
+                        }
+                    }
                 }
             }
         }
@@ -452,25 +462,27 @@
                     .backdrop {
                         backdrop-filter: none;
                         width: 95%;
+                        padding: 6% 0 0 0;
                         margin: 0 auto;
                         .title {
                             color: black;
                         }
                         p {
                             color: black;
+                            width: 100%;
                         }
                         .title1 {
                             width: 60%;
                             margin: 0 auto;
-                            margin-bottom: 30px;
+                            margin-bottom: 10px;
                             color: $primaryColor;
                         }
                     }
                     .grbtn {
                         display: flex;
                         justify-content: center;
-                        padding-bottom: 3%;
-                        padding-top: 5% !important;
+                        padding-bottom: 0%;
+                        padding-top: 3% !important;
                         margin: 0 auto;
                     }
                 }
@@ -494,7 +506,10 @@
                         .introduce {
                             padding-left: 0;
                             .title1 {
-                                width: 50%;
+                                width: 100%;
+                            }
+                            h2 {
+                                padding-bottom: 20px;
                             }
                             p {
                                 width: 100%;
@@ -512,11 +527,16 @@
         .shop1 {
             .introduce {
                 width: 95%;
-                padding-top: 20px;
+                padding-top: 7%;
                 .backdrop {
+                    padding-top: 0;
                     .title1 {
                         width: 60%;
                         margin-bottom: 20px;
+                    }
+                    .title1,
+                    .title {
+                        font-size: 30px;
                     }
                     .grbtn {
                         span {
@@ -528,6 +548,11 @@
             .content {
                 width: 95%;
                 margin-bottom: 20px;
+            }
+        }
+        .shop2 {
+            .introduce {
+                padding-top: 5%;
             }
         }
         .about_us_content {
@@ -596,6 +621,21 @@
                 }
             }
         }
+        .banner .carousel-item {
+            .content {
+                .welcome {
+                    font-size: 30px;
+                    letter-spacing: 8px;
+                }
+                div {
+                    font-size: 15px;
+                    letter-spacing: 5px;
+                }
+                .gr_readmore {
+                    display: none !important;
+                }
+            }
+        }
     }
     main {
         .our_story {
@@ -608,6 +648,11 @@
                     margin-right: 0;
                     .title {
                         text-align: center;
+                        padding-bottom: 0;
+                        font-size: 30px;
+                    }
+                    .text {
+                        padding: 3% 0 0 6%;
                     }
                     .gr_readmore {
                         justify-content: center;
@@ -624,7 +669,9 @@
         .shop {
             .product_tab_container {
                 .backdrop_bg {
+                    margin-bottom: 13%;
                     .controls-top {
+                        transform: translate(-50%, 130%);
                         .num1,
                         .num2,
                         .num3 {
@@ -653,6 +700,13 @@
                         .row {
                             .chef {
                                 padding: 3px !important;
+                                .content {
+                                    div {
+                                        button {
+                                            display: none;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -686,6 +740,17 @@
             .story1 {
                 .introduce {
                     margin-top: 0;
+                    .backdrop {
+                        .title,
+                        .title1 {
+                            font-size: 30px;
+                        }
+                        .grbtn {
+                            .btn {
+                                font-size: 15px;
+                            }
+                        }
+                    }
                 }
                 .content {
                     .slide_story {
@@ -705,6 +770,27 @@
                     }
                 }
             }
+            .story2 {
+                .backdrop {
+                    .containner {
+                        .introduce {
+                            .title,
+                            .title1,
+                            h2 {
+                                font-size: 30px;
+                            }
+                            .grbtn {
+                                .btn {
+                                    font-size: 15px;
+                                }
+                                span {
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .service_content {
             .containner {
@@ -713,6 +799,7 @@
                         width: 100%;
                         .title {
                             flex-direction: column;
+                            padding-top: 5%;
                             p {
                                 font-size: 30px;
                             }
@@ -757,6 +844,8 @@
             .content {
                 .title {
                     margin: 15px auto;
+                    text-align: center;
+                    font-size: 30px;
                 }
                 .text {
                     text-align: center;
@@ -786,6 +875,7 @@
         .shop {
             .product_tab_container {
                 .backdrop_bg {
+                    margin-bottom: 10%;
                     .controls-top {
                         display: none !important;
                     }

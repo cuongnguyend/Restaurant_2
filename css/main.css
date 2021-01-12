@@ -1,5 +1,6 @@
 @import url(/libs/bootstrap-4.0.0-dist/css/bootstrap.css);
 @import url(/libs/aos-master/dist/aos.css);
+@import url(/libs/animate.css);
 @keyframes drop {
   0% {
     opacity: 0;
@@ -55,7 +56,7 @@ header {
         display: none;
         animation: drop .8s;
         transition: .5s; }
-        header .containner .menu .navv div {
+        header .containner .menu .navv a {
           background: #1e1e1e;
           height: 70px;
           padding: 45px 15px 0 30px;
@@ -63,6 +64,8 @@ header {
           text-transform: uppercase;
           text-align: right;
           font-size: 16px;
+          text-decoration: none;
+          color: white;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -70,23 +73,27 @@ header {
           cursor: pointer;
           transition: .5s;
           float: right; }
-          header .containner .menu .navv div a {
+          header .containner .menu .navv a span {
+            color: #1e1e1e; }
+          header .containner .menu .navv a a {
             text-decoration: none;
             color: #f1f1f1;
             letter-spacing: 1px; }
-          header .containner .menu .navv div .left {
+          header .containner .menu .navv a .left {
             color: #f1f1f1;
             display: none; }
-          header .containner .menu .navv div:hover {
+          header .containner .menu .navv a:hover {
+            color: #fdc42c;
             padding: 0 15px;
             width: 250px;
             border-bottom: 1.5px solid #fdc42c;
             transition: .5s; }
-            header .containner .menu .navv div:hover a,
-            header .containner .menu .navv div:hover span {
+            header .containner .menu .navv a:hover a,
+            header .containner .menu .navv a:hover span {
               color: #fdc42c;
               transition: .3s; }
         header .containner .menu .navv .active {
+          color: #fdc42c;
           padding: 0 15px;
           width: 250px;
           border-bottom: 1.5px solid #fdc42c; }
@@ -153,17 +160,6 @@ header {
           transition: width 1s ease; }
         header .banner .carousel-item .content .welcome:hover::after {
           width: 100%; }
-      header .banner .carousel-item .content .text::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background: #fdc42c;
-        width: 0%;
-        height: 1.5px;
-        transition: width 1s ease; }
-      header .banner .carousel-item .content .text:hover::after {
-        width: 100%; }
       header .banner .carousel-item .content div {
         text-transform: uppercase;
         font-size: 25px;
@@ -269,6 +265,7 @@ main .our_story {
             padding-left: 15px;
             transition: .5s; }
     main .our_story .containner .img {
+      overflow: hidden;
       width: 50%;
       filter: drop-shadow(10px 8px 10px #222222);
       margin-left: 8px; }
@@ -363,6 +360,7 @@ main .shop {
           main .shop .product_tab_container .backdrop_bg .carousel-item .row .food .content {
             cursor: pointer;
             position: relative;
+            transition: .5s;
             width: fit-content;
             height: fit-content;
             text-align: right; }
@@ -404,7 +402,7 @@ main .our_service {
     background-size: 100%; }
     main .our_service .introduce .backdrop {
       padding: 30%;
-      padding-left: 12%;
+      padding-left: 13%;
       backdrop-filter: contrast(1.2) brightness(0.2) sepia(0.3) saturate(1.5) hue-rotate(-20deg); }
       main .our_service .introduce .backdrop .title {
         font-size: 40px;
@@ -1198,7 +1196,7 @@ footer {
             justify-content: center;
             align-items: center; }
     footer .backdrop .copyright {
-      padding: 10px 0 40px 40px;
+      padding: 3% 0;
       color: white; }
     footer .backdrop .red {
       color: red; }
@@ -1206,7 +1204,7 @@ footer {
 @keyframes drop_res {
   0% {
     opacity: 0;
-    transform: translateX(-50%); }
+    transform: translateX(-150%); }
   100% {
     opacity: 1;
     transform: translateX(0); }
@@ -1234,7 +1232,7 @@ footer {
       header .containner .menu .navv {
         left: 0;
         animation: drop_res .8s; }
-        header .containner .menu .navv div {
+        header .containner .menu .navv a {
           text-align: left;
           float: left;
           flex-direction: row-reverse;
@@ -1258,14 +1256,14 @@ footer {
       flex-direction: column; }
       main .shop .product_tab_container .controlTab {
         padding: 0;
-        padding-top: 20px;
+        padding-top: 6%;
         width: 100%;
         text-align: center; }
         main .shop .product_tab_container .controlTab p {
           width: 40%;
-          margin: 0 auto;
-          margin-bottom: 20px; }
+          margin: 0 auto; }
         main .shop .product_tab_container .controlTab ul {
+          margin-bottom: 10px !important;
           flex-direction: row;
           justify-content: center; }
           main .shop .product_tab_container .controlTab ul li {
@@ -1277,7 +1275,7 @@ footer {
         margin-bottom: 10%; }
         main .shop .product_tab_container .backdrop_bg .controls-top {
           bottom: 0;
-          transform: translate(-50%, 100%);
+          transform: translate(-50%, 120%);
           left: 50%; }
   main .our_service {
     flex-direction: column; }
@@ -1290,7 +1288,7 @@ footer {
         backdrop-filter: none;
         padding: 0;
         text-align: center;
-        padding-top: 40px; }
+        padding-top: 10%; }
         main .our_service .introduce .backdrop .title {
           color: black; }
         main .our_service .introduce .backdrop .title1 {
@@ -1310,23 +1308,23 @@ footer {
       transform: none;
       width: 87%;
       margin: 0 auto; }
-  main .our_story_content .story1 .introduce .backdrop {
-    padding: 5% 0; }
   main .our_story_content .story1 .content .slide_story .carousel-indicators {
     bottom: -15% !important; }
   main .our_story_content .story2 {
     background-size: cover; }
     main .our_story_content .story2 .backdrop .containner {
+      padding-top: 7%;
       flex-direction: column-reverse; }
       main .our_story_content .story2 .backdrop .containner .introduce {
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        padding-left: 0; }
         main .our_story_content .story2 .backdrop .containner .introduce .title1 {
           width: 70%;
           margin: 0 auto;
           margin-bottom: 20px; }
         main .our_story_content .story2 .backdrop .containner .introduce p {
-          width: 60%;
+          width: 70%;
           margin: 0 auto; }
         main .our_story_content .story2 .backdrop .containner .introduce .grbtn {
           display: flex;
@@ -1402,14 +1400,14 @@ footer {
     opacity: 1; } }
 @media (max-width: 768px) {
   .containner {
-    width: 95% !important;
+    width: 92% !important;
     margin: 0 auto; }
 
   header .banner .carousel-item .content .welcome {
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: 8px; }
   header .banner .carousel-item .content div {
-    font-size: 15px;
+    font-size: 25px;
     letter-spacing: 5px; }
   header .banner .carousel-item .content .gr_readmore {
     display: none !important; }
@@ -1418,14 +1416,14 @@ footer {
     header .containner .menu .openNav,
     header .containner .menu .closeNav {
       padding-left: 1vw; }
-    header .containner .menu .navv div {
+    header .containner .menu .navv a {
       height: 50px;
       padding: 20px 16px 0 16px;
       width: 150px;
       font-size: 13px;
       display: flex;
       justify-content: space-between; }
-      header .containner .menu .navv div:hover {
+      header .containner .menu .navv a:hover {
         width: 180px; }
     header .containner .menu .navv .active {
       width: 180px; }
@@ -1441,8 +1439,10 @@ footer {
       transform: none; }
   main .shop .product_tab_container .backdrop_bg {
     margin: 0 auto;
-    margin-bottom: 10%;
+    margin-bottom: 13%;
     width: 95%; }
+    main .shop .product_tab_container .backdrop_bg .controls-top {
+      transform: translate(-50%, 120%); }
     main .shop .product_tab_container .backdrop_bg .carousel-item img {
       padding: 1% 0;
       width: 100%; }
@@ -1452,25 +1452,32 @@ footer {
         display: none; }
   main .shop .product_tab_container .controlTab .title,
   main .shop .product_tab_container .controlTab p {
-    font-size: 25px; }
+    font-size: 30px; }
   main .shop .product_tab_container .controlTab ul li {
     font-size: 20px; }
   main .our_service .introduce {
     width: 95%; }
+    main .our_service .introduce .backdrop {
+      padding-top: 6%; }
   main .our_service .content {
     width: 95%; }
-  main .about_us .containner {
-    flex-direction: column-reverse; }
-    main .about_us .containner .introduce {
-      width: 100%;
-      text-align: center;
-      margin-top: 20px;
-      align-items: center; }
-      main .about_us .containner .introduce .grbtn {
-        padding-bottom: 5%;
-        padding-top: 0%; }
-    main .about_us .containner .slide_chef {
-      width: 100%; }
+  main .about_us {
+    padding-top: 7%; }
+    main .about_us .containner {
+      flex-direction: column-reverse; }
+      main .about_us .containner .introduce {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        align-items: center; }
+        main .about_us .containner .introduce .grbtn {
+          padding-bottom: 5%;
+          padding-top: 0%; }
+      main .about_us .containner .slide_chef {
+        width: 100%; }
+        main .about_us .containner .slide_chef .carousel-item .row {
+          width: 100%;
+          margin: 0 auto; }
   main .contact {
     display: flex;
     flex-direction: column-reverse;
@@ -1494,21 +1501,23 @@ footer {
       main .our_story_content .story1 .introduce .backdrop {
         backdrop-filter: none;
         width: 95%;
+        padding: 6% 0 0 0;
         margin: 0 auto; }
         main .our_story_content .story1 .introduce .backdrop .title {
           color: black; }
         main .our_story_content .story1 .introduce .backdrop p {
-          color: black; }
+          color: black;
+          width: 100%; }
         main .our_story_content .story1 .introduce .backdrop .title1 {
           width: 60%;
           margin: 0 auto;
-          margin-bottom: 30px;
+          margin-bottom: 10px;
           color: #fdc42c; }
       main .our_story_content .story1 .introduce .grbtn {
         display: flex;
         justify-content: center;
-        padding-bottom: 3%;
-        padding-top: 5% !important;
+        padding-bottom: 0%;
+        padding-top: 3% !important;
         margin: 0 auto; }
     main .our_story_content .story1 .bg_content {
       display: none; }
@@ -1523,22 +1532,31 @@ footer {
   main .our_story_content .story2 .backdrop .containner .introduce {
     padding-left: 0; }
     main .our_story_content .story2 .backdrop .containner .introduce .title1 {
-      width: 50%; }
+      width: 100%; }
+    main .our_story_content .story2 .backdrop .containner .introduce h2 {
+      padding-bottom: 20px; }
     main .our_story_content .story2 .backdrop .containner .introduce p {
       width: 100%; }
     main .our_story_content .story2 .backdrop .containner .introduce .grbtn i {
       padding-left: 1rem !important; }
   main .shop1 .introduce {
     width: 95%;
-    padding-top: 20px; }
-    main .shop1 .introduce .backdrop .title1 {
-      width: 60%;
-      margin-bottom: 20px; }
-    main .shop1 .introduce .backdrop .grbtn span {
-      background: #000; }
+    padding-top: 7%; }
+    main .shop1 .introduce .backdrop {
+      padding-top: 0; }
+      main .shop1 .introduce .backdrop .title1 {
+        width: 60%;
+        margin-bottom: 20px; }
+      main .shop1 .introduce .backdrop .title1,
+      main .shop1 .introduce .backdrop .title {
+        font-size: 30px; }
+      main .shop1 .introduce .backdrop .grbtn span {
+        background: #000; }
   main .shop1 .content {
     width: 95%;
     margin-bottom: 20px; }
+  main .shop2 .introduce {
+    padding-top: 5%; }
   main .about_us_content {
     width: 92%; }
     main .about_us_content .introduce {
@@ -1578,6 +1596,14 @@ footer {
 @media (max-width: 576px) {
   header .containner .logo a {
     font-size: 25px; }
+  header .banner .carousel-item .content .welcome {
+    font-size: 30px;
+    letter-spacing: 8px; }
+  header .banner .carousel-item .content div {
+    font-size: 15px;
+    letter-spacing: 5px; }
+  header .banner .carousel-item .content .gr_readmore {
+    display: none !important; }
 
   main .our_story .containner {
     z-index: 99;
@@ -1587,7 +1613,11 @@ footer {
       width: 100%;
       margin-right: 0; }
       main .our_story .containner .content .title {
-        text-align: center; }
+        text-align: center;
+        padding-bottom: 0;
+        font-size: 30px; }
+      main .our_story .containner .content .text {
+        padding: 3% 0 0 6%; }
       main .our_story .containner .content .gr_readmore {
         justify-content: center;
         padding: 0; }
@@ -1595,10 +1625,14 @@ footer {
       width: 100%;
       margin-left: 0;
       margin-bottom: 20px; }
-  main .shop .product_tab_container .backdrop_bg .controls-top .num1,
-  main .shop .product_tab_container .backdrop_bg .controls-top .num2,
-  main .shop .product_tab_container .backdrop_bg .controls-top .num3 {
-    font-size: 18px; }
+  main .shop .product_tab_container .backdrop_bg {
+    margin-bottom: 13%; }
+    main .shop .product_tab_container .backdrop_bg .controls-top {
+      transform: translate(-50%, 130%); }
+      main .shop .product_tab_container .backdrop_bg .controls-top .num1,
+      main .shop .product_tab_container .backdrop_bg .controls-top .num2,
+      main .shop .product_tab_container .backdrop_bg .controls-top .num3 {
+        font-size: 18px; }
   main .our_service .content {
     padding-bottom: 0; }
     main .our_service .content .row .col-12 {
@@ -1606,6 +1640,8 @@ footer {
       margin-bottom: 10%; }
   main .about_us .containner .slide_chef .carousel-item .row .chef {
     padding: 3px !important; }
+    main .about_us .containner .slide_chef .carousel-item .row .chef .content div button {
+      display: none; }
   main .about_us .containner .slide_chef .carousel-indicators {
     bottom: -12%; }
   main .contact .content .popup {
@@ -1618,6 +1654,11 @@ footer {
       font-size: 15px; }
   main .our_story_content .story1 .introduce {
     margin-top: 0; }
+    main .our_story_content .story1 .introduce .backdrop .title,
+    main .our_story_content .story1 .introduce .backdrop .title1 {
+      font-size: 30px; }
+    main .our_story_content .story1 .introduce .backdrop .grbtn .btn {
+      font-size: 15px; }
   main .our_story_content .story1 .content .slide_story .carousel-item .play {
     width: 70px;
     height: 70px; }
@@ -1626,10 +1667,19 @@ footer {
     main .our_story_content .story1 .content .slide_story .carousel-item .play ::after {
       width: 85px;
       height: 85px; }
+  main .our_story_content .story2 .backdrop .containner .introduce .title,
+  main .our_story_content .story2 .backdrop .containner .introduce .title1,
+  main .our_story_content .story2 .backdrop .containner .introduce h2 {
+    font-size: 30px; }
+  main .our_story_content .story2 .backdrop .containner .introduce .grbtn .btn {
+    font-size: 15px; }
+  main .our_story_content .story2 .backdrop .containner .introduce .grbtn span {
+    height: 40px; }
   main .service_content .containner .service1 .content {
     width: 100%; }
     main .service_content .containner .service1 .content .title {
-      flex-direction: column; }
+      flex-direction: column;
+      padding-top: 5%; }
       main .service_content .containner .service1 .content .title p {
         font-size: 30px; }
       main .service_content .containner .service1 .content .title img {
@@ -1653,7 +1703,9 @@ footer {
   main .about_us_content .bg_content {
     display: none; }
   main .about_us_content .content .title {
-    margin: 15px auto; }
+    margin: 15px auto;
+    text-align: center;
+    font-size: 30px; }
   main .about_us_content .content .text {
     text-align: center; }
   main .about_us_content .content .gr_readmore {
@@ -1666,8 +1718,10 @@ footer {
     footer .backdrop .content .ourservice {
       display: none; } }
 @media (max-width: 470px) {
-  main .shop .product_tab_container .backdrop_bg .controls-top {
-    display: none !important; }
+  main .shop .product_tab_container .backdrop_bg {
+    margin-bottom: 10%; }
+    main .shop .product_tab_container .backdrop_bg .controls-top {
+      display: none !important; }
   main .about_us .containner .slide_chef .carousel-item .row .chef .content div {
     display: none !important; }
   main .our_story .containner .content .title {

@@ -36,10 +36,18 @@ $(document).ready(function() {
     });
     $('.closeNav').click(function() {
         $('.navv').hide();
-        $('.closeNav').hide();
-        $('.openNav').show();
+
     });
 
+    $(document).mouseup(function(e) {
+        var container = $(".navv");
+
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.hide();
+            $('.closeNav').hide();
+            $('.openNav').show();
+        }
+    });
 
 });
 var totalItems1 = $('.slide1 .carousel-item').length;
